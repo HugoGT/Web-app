@@ -1,6 +1,8 @@
 function enviarForm(event) {
   event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
 
+  window.open("https://wa.me/14155238886?text=join%20stream-post", "_newtab");
+
   // Obtener los valores del formulario
   const body = JSON.stringify({
     nombre: event.target.name.value,
@@ -9,7 +11,7 @@ function enviarForm(event) {
     ubicacion: event.target.ubicacion.value,
   });
   // Realizar la solicitud a la API utilizando fetch
-  fetch("http://localhost:8000/guardar_usuario", {
+  fetch("https://sismos-qagw.onrender.com/guardar_usuario", {
     body,
     method: "post",
     headers: {
